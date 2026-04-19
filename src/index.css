@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-bk-red: #D62300;
+  --color-bk-orange: #FF8732;
+  --color-bk-yellow: #F5AF19;
+  --color-bk-brown: #502314;
+  --color-bk-cream: #F5EBDF;
+  /* Dark mode variants or accent shadows */
+  --color-bk-dark: #2B1608;
+}
+
+@layer base {
+  body {
+    @apply bg-bk-cream text-bk-brown font-sans antialiased selection:bg-bk-orange selection:text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-bk-red text-white font-display uppercase tracking-wider rounded-full hover:scale-105 transition-transform shadow-lg hover:shadow-xl active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-3 bg-white text-bk-red border-2 border-bk-red font-display uppercase tracking-wider rounded-full hover:bg-bk-red hover:text-white transition-all shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-bk-brown/10 rounded-3xl shadow-xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-bk-cream;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-bk-orange/30 rounded-full hover:bg-bk-orange/50 transition-colors;
+}

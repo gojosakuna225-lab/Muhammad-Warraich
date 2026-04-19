@@ -1,0 +1,13 @@
+{
+  "name": "BK Flame - High-Converting Fast Food Experience",
+  "description": "A performance-optimized Burger King website clone featuring flame-grilled aesthetics, streamlined ordering funnel, loyalty integration, and location-aware UX.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "Location-aware store finder",
+    "Streamlined ordering funnel",
+    "Loyalty points dashboard",
+    "Interactive menu categories"
+  ]
+}
